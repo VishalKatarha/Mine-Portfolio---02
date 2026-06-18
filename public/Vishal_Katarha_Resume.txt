@@ -1,0 +1,63 @@
+VISHAL KATARHA
+Full Stack Software Engineer, Game Developer & VFX Artist
+Creative & Video Technologist
+
+CONTACT DETAILS
+--------------------------------------------------
+Phone:     +91 62626 30843, +91 70003 35643
+Email:     kartikkatarha@gmail.com
+Instagram: @burnitupp_
+Location:  H.no.E/106 Sanjeevni Nagar 90ty quarter, Garha, Jabalpur, Madhya Pradesh, India
+GitHub:    https://github.com/VishalKatarha
+LinkedIn:  https://www.linkedin.com/in/vishal-katarha-4b8422298
+
+SKILLSET
+--------------------------------------------------
+* Programmer (React.js, Node.js, Express.js, JavaScript, Python, C#)
+* FX / VFX Artist
+* Game Developer (Unity, Unreal Engine 5, AR/VR)
+* Motion Graphic Designer (After Effects, Cinema 4D)
+* 3D Graphic Designer (Blender, Maya, Substance Painter)
+* Video Editor (Premiere Pro, DaVinci Resolve)
+* 2D / 3D Animator
+
+PROFESSIONAL EXPERIENCE
+--------------------------------------------------
+1. Video Editor & Animation Artist (Karamchand Studio, Jabalpur)
+   Period: 3 Years (2021 - 2024)
+   Details: Post-production editing, dynamic video loops, composting, and animation streams using Adobe Premiere Pro, After Effects, DaVinci Resolve, and Filmora.
+
+2. Motion Graphic Designer & Graphic Designer (CV Salon, Jabalpur)
+   Period: 3 Years (2021 - 2024)
+   Details: Formulating visual concepts, kinetic typography, promotional layouts, and vector assets using After Effects, Photoshop, and Illustrator.
+
+3. Game Developer, VFX/FX Artist, Game UI/UX & 3D Designer
+   Period: 2 Years (2022 - 2024)
+   Details: Engine mechanics, shader scripting, modular 3D asset modeling, texture baking, and AR/VR configurations in Unity and Unreal Engine 5 (C#, Blueprints, Blender, Maya, Substance Painter, Python).
+
+4. Full Stack MERN Developer, Web Developer & UI/UX Designer
+   Period: 2 Years (2022 - 2024)
+   Details: Designing interactive responsive dashboards, REST APIs, and database structures using ReactJS, Three.js, React Three Fiber, Node.js, Express, MongoDB, MySQL, TailwindCSS, Figma, Framer, and Spline 3D.
+
+EDUCATION JOURNEY
+--------------------------------------------------
+* 2014 - Secondary School (10th)
+  M.P. Board
+
+* 2016 - Higher Secondary (12th)
+  M.P. Board
+
+* 2019 - Bachelor of Commerce (Computer Applications)
+  Rani Durgavati Vishwavidyalaya (RDVV), Jabalpur
+
+* 2021 - PGDCA
+  Makhan Lal Chaturvedi National University
+
+* 2022 - Video Editor, Graphic Designer
+  Professional training & production agency certification
+
+* 2023 - 3D Visualizer, Animator, Motion Graphic Designer
+  Technical workflows & advanced asset pipelines
+
+* CURRENT - Game Developer, Software Engineer, Full Stack Developer
+  Real-world commercial engineering projects

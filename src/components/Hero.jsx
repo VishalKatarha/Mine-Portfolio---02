@@ -48,11 +48,16 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col justify-center">
 
           {/* Top Pill Tagline */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/8 w-max mb-8 animate-pulse">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/8 w-max mb-6 animate-pulse">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span className="font-inter text-[10px] md:text-xs font-semibold uppercase tracking-wider text-gray-300">
               Now active with MERN , Unity & Unreal Engine
             </span>
+          </div>
+
+          {/* User Name in Bacalisties Font */}
+          <div className="font-bacalisties text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-pink-400 via-rose-450 to-cyan-400 bg-clip-text text-transparent mb-4 pt-6 pb-2 leading-relaxed">
+            Vishal Katarha
           </div>
 
           {/* Large Hero Headline */}

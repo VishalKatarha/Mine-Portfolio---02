@@ -40,9 +40,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-28 pb-12 overflow-hidden px-6 md:px-12 max-w-7xl mx-auto w-full z-10 text-left"
+      className="relative min-h-screen flex flex-col justify-start lg:justify-center pt-28 pb-12 overflow-hidden px-6 md:px-12 max-w-7xl mx-auto w-full z-10 text-left"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full mb-16">
+      <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:items-center w-full mb-16">
 
         {/* Left Column: PhotoAI Style Form details (span 7) */}
         <div className="lg:col-span-7 flex flex-col justify-center">
@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/8 w-max mb-8 animate-pulse">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span className="font-inter text-[10px] md:text-xs font-semibold uppercase tracking-wider text-gray-300">
-              Now active with MERN & Unity 3D
+              Now active with MERN , Unity & Unreal Engine
             </span>
           </div>
 
@@ -105,50 +105,44 @@ export default function Hero() {
         </div>
 
         {/* Right Column: PhotoAI Collage Image Grid (span 5) */}
-        <div className="lg:col-span-5 grid grid-cols-12 gap-4 h-[420px] md:h-[500px]">
+        <div className="lg:col-span-5 grid grid-cols-12 gap-4 h-[280px] sm:h-[350px] md:h-[480px] lg:h-[420px] xl:h-[480px]">
 
           {/* Tall Image Cell Left */}
-          <div className="col-span-6 h-full overflow-hidden border border-white/8 rounded-3xl bg-purple-950/20 group relative shadow-2xl">
+          <div className="col-span-6 h-full min-h-0 overflow-hidden border border-white/8 rounded-3xl bg-purple-950/20 group relative shadow-2xl">
             <img
-              src="/projects/web-dev.png"
+              src="/projects/user3.jpg"
               alt="Web Development Project"
               className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
             <div className="absolute bottom-4 left-4 text-left">
-              <div className="text-[9px] font-semibold text-cyan-400 uppercase tracking-widest mb-1">Web Apps</div>
-              <div className="font-sora text-sm text-white font-bold">Aetherial Core</div>
             </div>
           </div>
 
           {/* Staggered Right block */}
-          <div className="col-span-6 flex flex-col gap-4 h-full">
+          <div className="col-span-6 flex flex-col gap-4 h-full min-h-0">
 
             {/* Top Right Cell */}
-            <div className="h-[48%] overflow-hidden border border-white/8 rounded-3xl bg-pink-950/20 group relative shadow-2xl">
+            <div className="flex-1 overflow-hidden border border-white/8 rounded-3xl bg-pink-950/20 group relative shadow-2xl">
               <img
-                src="/projects/game-dev.png"
+                src="/projects/user1.jpg"
                 alt="Game Development Scene"
-                className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
               <div className="absolute bottom-4 left-4 text-left">
-                <div className="text-[9px] font-semibold text-pink-400 uppercase tracking-widest mb-1">Real-time 3D</div>
-                <div className="font-sora text-sm text-white font-bold">Neo Tokyo</div>
               </div>
             </div>
 
             {/* Bottom Right Cell */}
-            <div className="h-[48%] overflow-hidden border border-white/8 rounded-3xl bg-blue-950/20 group relative shadow-2xl">
+            <div className="flex-1 overflow-hidden border border-white/8 rounded-3xl bg-blue-950/20 group relative shadow-2xl">
               <img
-                src="/projects/ui-ux.png"
+                src="/projects/user2.jpg"
                 alt="UI/UX design card"
-                className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
               <div className="absolute bottom-4 left-4 text-left">
-                <div className="text-[9px] font-semibold text-blue-400 uppercase tracking-widest mb-1">Mobile UIs</div>
-                <div className="font-sora text-sm text-white font-bold">Nova Wallet</div>
               </div>
             </div>
 
@@ -159,17 +153,17 @@ export default function Hero() {
       </div>
 
       {/* Small Bento Experience Cards Row */}
-      <div className="w-full border-t border-white/5 pt-8">
+      <div className="w-full border-t border-white/5 pt-8 mt-4 lg:mt-0">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {[
-            { years: '5 Years', role: 'Video Editor', glow: 'glow-pink', icon: '🎬' },
+            { years: '5 Years', role: 'Video Editor & Graphic Designer', glow: 'glow-pink', icon: '🎬' },
             { years: '3 Years', role: 'Motion Graphic Artist', glow: 'glow-purple', icon: '🎨' },
-            { years: '2 Years', role: 'Game Developer & VFX', glow: 'glow-cyan', icon: '🎮' },
-            { years: '2 Years', role: 'Web Developer & Ui Ux', glow: 'glow-blue', icon: '⚛️' }
+            { years: '2 Years', role: 'Game Developer & VFX Artist', glow: 'glow-cyan', icon: '🎮' },
+            { years: '2 Years', role: 'Web Developer & Ui Ux Designer', glow: 'glow-blue', icon: '⚛️' }
           ].map((item, idx) => (
             <div
               key={idx}
-              className={`bento-card ${item.glow} p-5 flex flex-col justify-between text-left group transition-all duration-300 h-28`}
+              className={`bento-card ${item.glow} p-5 flex flex-col justify-between text-left group transition-all duration-300 min-h-28 h-auto`}
             >
               <div className="flex justify-between items-start">
                 <span className="text-xl">{item.icon}</span>

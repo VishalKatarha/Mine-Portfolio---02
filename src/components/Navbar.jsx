@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X, Sparkles, Sun, Moon } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ theme, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -60,7 +60,7 @@ export default function Navbar() {
         : 'bg-transparent'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between lg:gap-4 xl:gap-6">
         {/* Logo / Title */}
         <a
           href="#home"
@@ -77,13 +77,13 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-1.5 bg-white/3 border border-white/6 px-2 py-1.5 rounded-full backdrop-blur-sm">
+        <div className="hidden lg:flex items-center lg:gap-1 xl:gap-1.5 bg-white/3 border border-white/6 lg:px-1.5 lg:py-1 xl:px-2 xl:py-1.5 rounded-full backdrop-blur-sm">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
               onClick={(e) => handleScrollTo(e, link.href)}
-              className={`font-inter text-xs uppercase tracking-widest px-4 py-2 rounded-full transition-all duration-300 ${activeSection === link.id
+              className={`font-inter lg:text-[10px] xl:text-xs uppercase tracking-widest lg:px-3 lg:py-1.5 xl:px-4 xl:py-2 rounded-full transition-all duration-300 ${activeSection === link.id
                 ? 'text-white bg-gradient-to-r from-purple-600/30 to-pink-500/30 border border-purple-500/30 font-medium'
                 : 'text-gray-400 hover:text-white hover:bg-white/5 border border-transparent'
                 }`}
@@ -132,16 +132,43 @@ export default function Navbar() {
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
             </a>
+
+            {/* Desktop Theme Switcher */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-white/5 border border-white/8 text-gray-300 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300 cursor-pointer ml-1"
+              title={theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400 animate-spin-slow" />
+              ) : (
+                <Moon className="w-4 h-4 text-purple-600" />
+              )}
+            </button>
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/8 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all"
-        >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        {/* Mobile controls group (Theme Toggle + Hamburger) */}
+        <div className="lg:hidden flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-xl bg-white/5 border border-white/8 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all cursor-pointer"
+            title={theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-4.5 h-4.5 text-amber-400 animate-spin-slow" />
+            ) : (
+              <Moon className="w-4.5 h-4.5 text-purple-600" />
+            )}
+          </button>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 rounded-xl bg-white/5 border border-white/8 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all cursor-pointer"
+          >
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Drawer */}

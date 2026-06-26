@@ -31,28 +31,15 @@ function App() {
       {/* Dynamic Cursor tracking and background radial glows */}
       <MouseGlow />
 
-      {/* Floating Theme Switcher Button */}
-      <button
-        onClick={toggleTheme}
-        className="fixed top-5 right-5 lg:top-6 lg:right-12 z-[100] p-3 rounded-2xl bento-card border border-white/8 text-gray-300 hover:text-white hover:border-purple-500/40 hover:bg-purple-500/10 transition-all duration-300 shadow-2xl flex items-center justify-center bg-white/4 backdrop-blur-md cursor-pointer"
-        title={theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
-      >
-        {theme === 'dark' ? (
-          <Sun className="w-5 h-5 text-amber-400 animate-spin-slow" />
-        ) : (
-          <Moon className="w-5 h-5 text-purple-600" />
-        )}
-      </button>
-
       {/* Main UI structures */}
-      <Navbar />
-      
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+
       <main className="relative flex flex-col items-center">
         <Hero />
-        <About />
         <Skills />
         <Projects />
         <Timeline />
+        <About />
         <Contact />
       </main>
 

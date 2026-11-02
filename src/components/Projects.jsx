@@ -1,92 +1,105 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Sparkles } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Sparkles } from "lucide-react";
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const categories = [
-    'All',
-    'Web Development',
-    'UI/UX Design',
-    'Motion Graphics',
-    'Video Editing',
-    '3D Visualization',
-    'Game Development',
+    "All",
+    "Web Development",
+    "UI/UX Design",
+    "Motion Graphics",
+    "Video Editing",
+    "3D Visualization",
+    "Game Development",
   ];
 
   const projectsData = [
     {
       id: 1,
-      title: 'Web Dev & Designs',
-      category: 'Web Development & Ui Ux',
-      description: 'Modern, responsive web applications and UI/UX experiences built with React, MERN Stack, Tailwind CSS, and modern frontend technologies.',
-      image: '/projects/web-dev.png',
-      tags: ['React', 'Tailwind', 'HTML5', 'CSS', 'Framer', 'Figma'],
-      liveLink: 'https://youtu.be/a1T4AqQb9p8?si=3WxhethdQdEPCkS-',
-      driveLink: 'https://drive.google.com/drive/folders/1NUAZsS0yRqSZ9XyCNmtSlwDz-y8Llpf_?usp=sharing',
-      gradient: 'from-cyan-500/10 to-blue-500/10'
+      title: "MERN Stack Projects & Designs",
+      category: "Web Development & Ui Ux",
+      description:
+        "Modern, responsive web applications and UI/UX experiences built with React, MERN Stack, Tailwind CSS, and modern frontend technologies.",
+      image: "/projects/web-dev.png",
+      tags: ["React", "Tailwind", "HTML5", "CSS", "Framer", "Figma"],
+      liveLink: "https://youtu.be/a1T4AqQb9p8?si=3WxhethdQdEPCkS-",
+      driveLink:
+        "https://drive.google.com/drive/folders/1NUAZsS0yRqSZ9XyCNmtSlwDz-y8Llpf_?usp=sharing",
+      gradient: "from-cyan-500/10 to-blue-500/10",
     },
     {
       id: 2,
-      title: 'Gaming & VFX ',
-      category: 'Game Development',
-      description: 'Immersive game environments, real-time visual effects, and interactive experiences developed using Unreal Engine, Unity, AR/VR, and 3D workflows.',
-      image: '/projects/game-dev.png',
-      tags: ['Unity 3D', 'C#', 'Unreal Engine', 'C++'],
-      liveLink: 'https://youtube.com/shorts/8GnMqNjEQnk?si=-wLxLhSTnVr2FPZt',
-      driveLink: 'https://drive.google.com/drive/folders/1vJ7xdSy6Dyw3keAPXp8wsJhN1b-DpcV-?usp=sharing',
-      gradient: 'from-purple-500/10 to-pink-500/10'
+      title: "Gaming & VFX ",
+      category: "Game Development",
+      description:
+        "Immersive game environments, real-time visual effects, and interactive experiences developed using Unreal Engine, Unity, AR/VR, and 3D workflows.",
+      image: "/projects/game-dev.png",
+      tags: ["Unity 3D", "C#", "Unreal Engine", "C++"],
+      liveLink: "https://youtube.com/shorts/8GnMqNjEQnk?si=-wLxLhSTnVr2FPZt",
+      driveLink:
+        "https://drive.google.com/drive/folders/1vJ7xdSy6Dyw3keAPXp8wsJhN1b-DpcV-?usp=sharing",
+      gradient: "from-purple-500/10 to-pink-500/10",
     },
     {
       id: 3,
-      title: 'Animation & Motion Designs ',
-      category: 'Motion Graphics',
-      description: 'An abstract cinematic motion graphics video exploring high-speed fluid dynamics, glass refractions, and digital chrome aesthetics.',
-      image: '/projects/motion.png',
-      tags: ['After Effects', 'Cinema 4D', 'Redshift'],
-      liveLink: 'https://youtube.com/shorts/8eD8dcZHKVk?si=fVO1z4Nq8kxGyXoN',
-      driveLink: 'https://drive.google.com/drive/folders/1-gLRifGGJhTZQlBjrLcUZ4_VsaLTaGP5?usp=sharing',
-      gradient: 'from-pink-500/10 to-rose-500/10'
+      title: "Animation & Motion Designs ",
+      category: "Motion Graphics",
+      description:
+        "An abstract cinematic motion graphics video exploring high-speed fluid dynamics, glass refractions, and digital chrome aesthetics.",
+      image: "/projects/motion.png",
+      tags: ["After Effects", "Cinema 4D", "Redshift"],
+      liveLink: "https://youtube.com/shorts/8eD8dcZHKVk?si=fVO1z4Nq8kxGyXoN",
+      driveLink:
+        "https://drive.google.com/drive/folders/1-gLRifGGJhTZQlBjrLcUZ4_VsaLTaGP5?usp=sharing",
+      gradient: "from-pink-500/10 to-rose-500/10",
     },
     {
       id: 4,
-      title: '3D Design & Products',
-      category: '3D Visualization',
-      description: 'Photorealistic 3D modeling, product visualization, texturing, lighting, and rendering using Blender, Maya, and Substance Painter.',
-      image: '/projects/three-d.jpg',
-      tags: ['Blender', 'Maya', 'Substance Painter', 'Cycles'],
-      liveLink: 'https://youtube.com/shorts/ikYuE5r9Eto?si=SjoRD44zEevsxNIL',
-      driveLink: 'https://drive.google.com/drive/folders/1gOBruqx0uCkV9qdzTsVFlczCU3JmxMGa?usp=sharing',
-      gradient: 'from-indigo-500/10 to-purple-500/10'
+      title: "3D Design & Products",
+      category: "3D Visualization",
+      description:
+        "Photorealistic 3D modeling, product visualization, texturing, lighting, and rendering using Blender, Maya, and Substance Painter.",
+      image: "/projects/three-d.jpg",
+      tags: ["Blender", "Maya", "Substance Painter", "Cycles"],
+      liveLink: "https://youtube.com/shorts/ikYuE5r9Eto?si=SjoRD44zEevsxNIL",
+      driveLink:
+        "https://drive.google.com/drive/folders/1gOBruqx0uCkV9qdzTsVFlczCU3JmxMGa?usp=sharing",
+      gradient: "from-indigo-500/10 to-purple-500/10",
     },
     {
       id: 5,
-      title: 'Graphics Designs',
-      category: 'Graphics',
-      description: 'A premium mobile application flow for cryptocurrency asset management, designed with glowing dark nodes and high readability.',
-      image: '/projects/ui-ux.jpg',
-      tags: ['Illustrator', 'Photoshop'],
-      liveLink: 'https://www.instagram.com/burnitupp_',
-      driveLink: 'https://drive.google.com/drive/folders/1zOoioYDYHPxsvyD8xvLHlP4Wgsi7koSL?usp=sharing',
-      gradient: 'from-blue-500/10 to-cyan-500/10'
+      title: "Graphics Designs",
+      category: "Graphics",
+      description:
+        "A premium mobile application flow for cryptocurrency asset management, designed with glowing dark nodes and high readability.",
+      image: "/projects/ui-ux.jpg",
+      tags: ["Illustrator", "Photoshop"],
+      liveLink: "https://www.instagram.com/burnitupp_",
+      driveLink:
+        "https://drive.google.com/drive/folders/1zOoioYDYHPxsvyD8xvLHlP4Wgsi7koSL?usp=sharing",
+      gradient: "from-blue-500/10 to-cyan-500/10",
     },
     {
       id: 6,
-      title: 'Cinematic & Reels Videos',
-      category: 'Video Editing',
-      description: 'Professional video editing, color grading, transitions, and cinematic reels optimized for social media, advertising, and storytelling.',
-      image: '/projects/video.png',
-      tags: ['Premiere Pro', 'DaVinci Resolve', 'Final Cut Pro'],
-      liveLink: 'https://youtu.be/AwB7nsC9ppw?si=egwtaTDmKgPprH8u',
-      driveLink: 'https://drive.google.com/drive/folders/14_NGbyhCB_0cQOBKI1ehVhngaETjTIXd?usp=sharing',
-      gradient: 'from-rose-500/10 to-orange-500/10'
+      title: "Cinematic & Reels Videos",
+      category: "Video Editing",
+      description:
+        "Professional video editing, color grading, transitions, and cinematic reels optimized for social media, advertising, and storytelling.",
+      image: "/projects/video.png",
+      tags: ["Premiere Pro", "DaVinci Resolve", "Final Cut Pro"],
+      liveLink: "https://youtu.be/AwB7nsC9ppw?si=egwtaTDmKgPprH8u",
+      driveLink:
+        "https://drive.google.com/drive/folders/14_NGbyhCB_0cQOBKI1ehVhngaETjTIXd?usp=sharing",
+      gradient: "from-rose-500/10 to-orange-500/10",
     },
   ];
 
-  const filteredProjects = activeFilter === 'All'
-    ? projectsData
-    : projectsData.filter((p) => p.category === activeFilter);
+  const filteredProjects =
+    activeFilter === "All"
+      ? projectsData
+      : projectsData.filter((p) => p.category === activeFilter);
 
   return (
     <section
@@ -107,10 +120,11 @@ export default function Projects() {
           <button
             key={cat}
             onClick={() => setActiveFilter(cat)}
-            className={`font-inter text-xs md:text-sm px-4 py-2.5 rounded-2xl border transition-all duration-300 cursor-pointer ${activeFilter === cat
-              ? 'bg-gradient-to-r from-purple-600 to-pink-500 border-purple-500/35 text-white font-medium shadow-[0_10px_20px_rgba(168,85,247,0.15)]'
-              : 'bg-white/3 border-white/5 text-gray-400 hover:text-white hover:bg-white/6 hover:border-white/10'
-              }`}
+            className={`font-inter text-xs md:text-sm px-4 py-2.5 rounded-2xl border transition-all duration-300 cursor-pointer ${
+              activeFilter === cat
+                ? "bg-gradient-to-r from-purple-600 to-pink-500 border-purple-500/35 text-white font-medium shadow-[0_10px_20px_rgba(168,85,247,0.15)]"
+                : "bg-white/3 border-white/5 text-gray-400 hover:text-white hover:bg-white/6 hover:border-white/10"
+            }`}
           >
             {cat}
           </button>
@@ -130,7 +144,12 @@ export default function Projects() {
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.92 }}
-              transition={{ duration: 0.45, type: 'spring', stiffness: 90, damping: 15 }}
+              transition={{
+                duration: 0.45,
+                type: "spring",
+                stiffness: 90,
+                damping: 15,
+              }}
               className="bento-card glow-border flex flex-col justify-between overflow-hidden group"
             >
               {/* Image Container */}
@@ -190,7 +209,15 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 font-sora font-medium text-xs text-gray-400 hover:text-white px-3 py-2.5 transition-colors duration-300 cursor-pointer"
                     >
-                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg
+                        className="w-3.5 h-3.5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
                         <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
                         <path d="M12 10v6" />
                         <path d="M9 13h6" />

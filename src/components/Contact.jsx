@@ -19,19 +19,41 @@ export default function Contact() {
 
     setStatus('sending');
 
-    // Simulate network latency
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    fetch('https://portfolio--data-default-rtdb.firebaseio.com/Portfolio-Data.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        submittedAt: new Date().toISOString()
+      })
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Failed to send message');
+        }
+        return res.json();
+      })
+      .then(() => {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
 
-      // Trigger success confetti explosion
-      confetti({
-        particleCount: 150,
-        spread: 80,
-        origin: { y: 0.65 },
-        colors: ['#8b5cf6', '#ec4899', '#06b6d4']
+        // Trigger success confetti explosion
+        confetti({
+          particleCount: 150,
+          spread: 80,
+          origin: { y: 0.65 },
+          colors: ['#8b5cf6', '#ec4899', '#06b6d4']
+        });
+      })
+      .catch((err) => {
+        console.error('Error sending message:', err);
+        setStatus('error');
       });
-    }, 1200);
   };
 
   return (
@@ -205,6 +227,27 @@ export default function Contact() {
                   className="bg-white/4 border border-white/8 hover:bg-white/6 text-white font-sora text-sm px-6 py-3 rounded-xl transition-all cursor-pointer"
                 >
                   Send Another Message
+                </button>
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div className="absolute inset-0 bg-[#050508]/90 backdrop-blur-md rounded-[2rem] flex flex-col items-center justify-center text-center p-8 z-20 animate-fade-in">
+                <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/25 flex items-center justify-center text-rose-400 mb-6 shadow-[0_0_20px_rgba(244,63,94,0.35)]">
+                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 className="font-sora font-extrabold text-2xl text-white mb-2">Submission Failed</h3>
+                <p className="font-inter text-gray-300 text-sm max-w-sm leading-relaxed mb-6 font-light">
+                  Something went wrong while dispatching your message. Please try again.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setStatus('idle')}
+                  className="bg-white/4 border border-white/8 hover:bg-white/6 text-white font-sora text-sm px-6 py-3 rounded-xl transition-all cursor-pointer"
+                >
+                  Try Again
                 </button>
               </div>
             )}

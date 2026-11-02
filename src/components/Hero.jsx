@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Download, ArrowRight, Sparkles, Send } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import React, { useState } from "react";
+import { Download, ArrowRight, Sparkles, Send } from "lucide-react";
+import confetti from "canvas-confetti";
 
 export default function Hero() {
-  const [emailInput, setEmailInput] = useState('');
+  const [emailInput, setEmailInput] = useState("");
 
   const triggerConfetti = () => {
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#a855f7', '#ec4899', '#06b6d4']
+      colors: ["#a855f7", "#ec4899", "#06b6d4"],
     });
   };
 
@@ -20,22 +20,20 @@ export default function Hero() {
     triggerConfetti();
 
     // Smooth scroll to contact and prefill email or notify
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
       window.scrollTo({
         top: contactSection.offsetTop - 80,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
 
       // Prefill email in contact form if exists
-      const emailField = document.getElementById('email');
+      const emailField = document.getElementById("email");
       if (emailField) {
         emailField.value = emailInput;
       }
     }
   };
-
-
 
   return (
     <section
@@ -43,10 +41,8 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col justify-start lg:justify-center pt-28 pb-12 overflow-hidden px-6 md:px-12 max-w-7xl mx-auto w-full z-10 text-left"
     >
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:items-center w-full mb-16">
-
         {/* Left Column: PhotoAI Style Form details (span 7) */}
         <div className="lg:col-span-7 flex flex-col justify-center">
-
           {/* Top Pill Tagline */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/8 w-max mb-6 animate-pulse">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
@@ -62,15 +58,29 @@ export default function Hero() {
 
           {/* Large Hero Headline */}
           <h1 className="font-sora font-extrabold text-2xl md:text-4xl lg:text-[46px] tracking-tight leading-[1.1] text-white mb-6 uppercase">
-            Software<span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Engineer</span> <br />
-            Game Developer & <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-pink-500 bg-clip-text text-transparent">VFX Artist</span> <br />
-            Creative & <span className="bg-gradient-to-r from-pink-400 via-rose-450 to-cyan-400 bg-clip-text text-transparent">Video Technologist</span>
+            Software
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              {" "}
+              Engineer
+            </span>{" "}
+            <br />
+            Game Developer &{" "}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-pink-500 bg-clip-text text-transparent">
+              VFX Artist
+            </span>{" "}
+            <br />
+            Creative &{" "}
+            <span className="bg-gradient-to-r from-pink-400 via-rose-450 to-cyan-400 bg-clip-text text-transparent">
+              Video Technologist
+            </span>
           </h1>
 
           {/* Subtitle */}
           <p className="font-inter text-sm md:text-base text-gray-400 max-w-xl mb-10 leading-relaxed font-light">
-            Hi, I’m Vishal Katarha, a Creative Technologist & Software Engineer skilled in Graphic Designing , Motion graphics , 2D/3D animation , Game Development, 3D Artist , Video Editing , VFX and Full Stack Web Development.
-
+            Hi, I’m Vishal Katarha, a Creative Technologist & Software Engineer
+            skilled in Graphic Designing , Motion graphics , 2D/3D animation ,
+            Game Development, 3D Artist , Video Editing , VFX and Full Stack Web
+            Development.
           </p>
 
           {/* Action buttons inside a bento-style flex container */}
@@ -81,11 +91,11 @@ export default function Hero() {
               onClick={(e) => {
                 e.preventDefault();
                 triggerConfetti();
-                const contactSection = document.getElementById('contact');
+                const contactSection = document.getElementById("contact");
                 if (contactSection) {
                   window.scrollTo({
                     top: contactSection.offsetTop - 80,
-                    behavior: 'smooth',
+                    behavior: "smooth",
                   });
                 }
               }}
@@ -106,12 +116,10 @@ export default function Hero() {
               <span>Download Resume</span>
             </a>
           </div>
-
         </div>
 
         {/* Right Column: PhotoAI Collage Image Grid (span 5) */}
         <div className="lg:col-span-5 grid grid-cols-12 gap-4 h-[280px] sm:h-[350px] md:h-[480px] lg:h-[420px] xl:h-[480px]">
-
           {/* Tall Image Cell Left */}
           <div className="col-span-6 h-full min-h-0 overflow-hidden border border-white/8 rounded-3xl bg-purple-950/20 group relative shadow-2xl">
             <img
@@ -120,13 +128,11 @@ export default function Hero() {
               className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
-            <div className="absolute bottom-4 left-4 text-left">
-            </div>
+            <div className="absolute bottom-4 left-4 text-left"></div>
           </div>
 
           {/* Staggered Right block */}
           <div className="col-span-6 flex flex-col gap-4 h-full min-h-0">
-
             {/* Top Right Cell */}
             <div className="flex-1 overflow-hidden border border-white/8 rounded-3xl bg-pink-950/20 group relative shadow-2xl">
               <img
@@ -135,8 +141,7 @@ export default function Hero() {
                 className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
-              <div className="absolute bottom-4 left-4 text-left">
-              </div>
+              <div className="absolute bottom-4 left-4 text-left"></div>
             </div>
 
             {/* Bottom Right Cell */}
@@ -147,24 +152,40 @@ export default function Hero() {
                 className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
-              <div className="absolute bottom-4 left-4 text-left">
-              </div>
+              <div className="absolute bottom-4 left-4 text-left"></div>
             </div>
-
           </div>
-
         </div>
-
       </div>
 
       {/* Small Bento Experience Cards Row */}
       <div className="w-full border-t border-white/5 pt-8 mt-4 lg:mt-0">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {[
-            { years: '5 Years', role: 'Video Editor & Graphic Designer', glow: 'glow-pink', icon: '🎬' },
-            { years: '3 Years', role: 'Motion Graphic Artist', glow: 'glow-purple', icon: '🎨' },
-            { years: '2 Years', role: 'Game Developer & VFX Artist', glow: 'glow-cyan', icon: '🎮' },
-            { years: '2 Years', role: 'Web Developer & Ui Ux Designer', glow: 'glow-blue', icon: '⚛️' }
+            {
+              years: "7 Years",
+              role: "Video Editor & Graphic Designer",
+              glow: "glow-pink",
+              icon: "🎬",
+            },
+            {
+              years: "5 Years",
+              role: "Motion Graphic Artist",
+              glow: "glow-purple",
+              icon: "🎨",
+            },
+            {
+              years: "3 Years",
+              role: "3D Designer ( Game Dev & VFX )",
+              glow: "glow-cyan",
+              icon: "🎮",
+            },
+            {
+              years: "4 Years",
+              role: "Full Stack MERN Developer",
+              glow: "glow-blue",
+              icon: "⚛️",
+            },
           ].map((item, idx) => (
             <div
               key={idx}
@@ -172,7 +193,9 @@ export default function Hero() {
             >
               <div className="flex justify-between items-start">
                 <span className="text-xl">{item.icon}</span>
-                <span className="text-[10px] font-inter text-gray-500 uppercase tracking-wider font-semibold">Experience</span>
+                <span className="text-[10px] font-inter text-gray-500 uppercase tracking-wider font-semibold">
+                  Experience
+                </span>
               </div>
               <div>
                 <h4 className="font-sora font-extrabold text-lg text-white mb-0.5 leading-none">

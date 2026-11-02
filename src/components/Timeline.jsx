@@ -1,60 +1,65 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Briefcase, GraduationCap, Calendar } from "lucide-react";
 
 export default function Timeline() {
   const experienceData = [
     {
-      role: 'Full Stack MERN Developer, Web & UI/UX Designer',
-      company: 'Self-Employed / Remote',
-      period: '2 Years (2025 - Present)',
-      description: 'Engineering frontend and backend web interfaces by utilizing HTML, CSS, JavaScript, ReactJS, React Three Fiber, ThreeJS, Framer Motion, Node.js, MySQL, MongoDB, TailwindCSS, Figma, Framer, and Spline 3D.',
+      role: "Full Stack MERN Developer, Web & UI/UX Designer",
+      company: "Self-Employed / Remote",
+      period: "4 Years (2025 - Present)",
+      description:
+        "Engineering frontend and backend web interfaces by utilizing HTML, CSS, JavaScript, ReactJS, React Three Fiber, ThreeJS, Framer Motion, Node.js, MySQL, MongoDB, TailwindCSS, Figma, Framer, and Spline 3D.",
     },
     {
-      role: 'Game Developer, VFX/FX Artist, Game UI/UX & 3D Designer',
-      company: 'Freelance & Contract',
-      period: '2 Years (2025 - 2026)',
-      description: 'Developing mechanics, shaders, models, baked maps, and AR/VR systems using Blender, Maya, Substance Painter, Unreal Engine with Blueprints, Unity Engine with AR-VR & C#, and Python.',
+      role: "Game Developer, VFX/FX Artist, Game UI/UX & 3D Designer",
+      company: "Freelance & Contract",
+      period: "3 Years (2025 - 2026)",
+      description:
+        "Developing mechanics, shaders, models, baked maps, and AR/VR systems using Blender, Maya, Substance Painter, Unreal Engine with Blueprints, Unity Engine with AR-VR & C#, and Python.",
     },
     {
-      role: 'Video Editor & Animation Artist',
-      company: 'Karamchand Studio (Jabalpur)',
-      period: '3 Years (2024 - 2026)',
-      description: 'Performed video post-production, advanced composting, animations, and sound design using Adobe Premiere Pro, After Effects, DaVinci Resolve, and Filmora.',
+      role: "Video Editor & Animation Artist",
+      company: "Karamchand Studio (Jabalpur)",
+      period: "7 Years (2024 - 2026)",
+      description:
+        "Performed video post-production, advanced composting, animations, and sound design using Adobe Premiere Pro, After Effects, DaVinci Resolve, and Filmora.",
     },
     {
-      role: 'Motion Graphic Designer & Graphic Designer',
-      company: 'CV Salon (Jabalpur)',
-      period: '3 Years (2022 - 2024)',
-      description: 'Designed motion art, promotional concepts, and layouts using Adobe After Effects, Photoshop, Illustrator, and Premiere Pro.',
+      role: "Motion Graphic Designer & Graphic Designer",
+      company: "CV Salon (Jabalpur)",
+      period: "5 Years (2022 - 2024)",
+      description:
+        "Designed motion art, promotional concepts, and layouts using Adobe After Effects, Photoshop, Illustrator, and Premiere Pro.",
     },
-
   ];
 
   const educationData = [
     {
-      degree: 'PGDCA (Post Graduate Diploma in Computer Applications)',
-      institution: 'Makhan Lal Chaturvedi National University',
-      period: '2021',
-      description: 'Detailed study of computer languages, databases, and application scripts.',
+      degree: "PGDCA (Post Graduate Diploma in Computer Applications)",
+      institution: "Makhan Lal Chaturvedi National University",
+      period: "2021",
+      description:
+        "Detailed study of computer languages, databases, and application scripts.",
     },
     {
-      degree: 'Bachelor of Commerce (Computer Applications)',
-      institution: 'Rani Durgavati Vishwavidyalaya (RDVV), Jabalpur',
-      period: '2019',
-      description: 'Integrated commerce studies with computer systems, networking, and software application logic.',
+      degree: "Bachelor of Commerce (Computer Applications)",
+      institution: "Rani Durgavati Vishwavidyalaya (RDVV), Jabalpur",
+      period: "2019",
+      description:
+        "Integrated commerce studies with computer systems, networking, and software application logic.",
     },
     {
-      degree: 'Higher Secondary School (12th)',
-      institution: 'M.P. Board',
-      period: '2016',
-      description: 'Focus on science and mathematics fundamentals.',
+      degree: "Higher Secondary School (12th)",
+      institution: "M.P. Board",
+      period: "2016",
+      description: "Focus on science and mathematics fundamentals.",
     },
     {
-      degree: 'Secondary School (10th)',
-      institution: 'M.P. Board',
-      period: '2014',
-      description: 'General high school foundation.',
+      degree: "Secondary School (10th)",
+      institution: "M.P. Board",
+      period: "2014",
+      description: "General high school foundation.",
     },
   ];
 
@@ -71,7 +76,7 @@ export default function Timeline() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'spring', stiffness: 90, damping: 14 },
+      transition: { type: "spring", stiffness: 90, damping: 14 },
     },
   };
 
@@ -80,7 +85,7 @@ export default function Timeline() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'spring', stiffness: 90, damping: 14 },
+      transition: { type: "spring", stiffness: 90, damping: 14 },
     },
   };
 
@@ -90,7 +95,6 @@ export default function Timeline() {
       className="relative py-20 md:py-32 px-6 md:px-12 max-w-7xl mx-auto w-full z-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-
         {/* Experience Column */}
         <div className="flex flex-col">
           {/* Header */}
@@ -111,7 +115,7 @@ export default function Timeline() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             className="relative border-l border-white/8 pl-6 md:pl-8 flex flex-col gap-8 text-left"
           >
             {experienceData.map((item, idx) => (
@@ -168,7 +172,7 @@ export default function Timeline() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             className="relative border-l border-white/8 pl-6 md:pl-8 flex flex-col gap-8 text-left"
           >
             {educationData.map((item, idx) => (
@@ -204,7 +208,6 @@ export default function Timeline() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );
